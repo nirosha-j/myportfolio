@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirosha | Software Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleDetails(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Nirosha</h1>
+        <p>Software Developer</p>
+        <p>Skills: Java, OOP, MySQL, HTML, CSS, JavaScript</p>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <h2>My Projects</h2>
+        <ul>
+            <li onclick="toggleDetails('project1')">🏠 Home Appliance Filtering System</li>
+            <div id="project1" class="project-details" style="display:none;">
+                <p>A filtering system for home appliances based on price, location, and availability.</p>
+                <h3>How the System Works</h3>
+                <ul>
+                    <li>Login Page – Admin & Customer select login type.</li>
+                    <li>Admin Login: Can add, delete, and manage products & shops.</li>
+                    <li>Customer Login: Can filter products, view details, and select a shop.</li>
+                </ul>
+                <h3>Example Output</h3>
+                <pre>
+--------------------------------------------
+      Home Appliance Filtering System
+--------------------------------------------
+Select Login Type:
+1. Admin
+2. Customer
+
+Enter your choice: 1
+
+--------------------------------------------
+           Admin Login
+--------------------------------------------
+Enter Username: admin123
+Enter Password: ********
+
+Login Successful! ✅
+
+--------------------------------------------
+        Admin Dashboard
+--------------------------------------------
+1. Add Product
+2. Delete Product
+3. View All Products
+4. Logout
+
+Enter your choice: 1
+
+Enter Product Name: Air Conditioner
+Enter Price: 35,000
+Enter Shop Name: CoolMart
+Enter Shop Location: Bangalore
+Enter Shop Contact: +91 9988776655
+
+Product Added Successfully! ✅
+
+--------------------------------------------
+        Customer Login
+--------------------------------------------
+Enter Username: nirosha
+Enter Password: ********
+
+Login Successful! ✅
+
+--------------------------------------------
+        Welcome Nirosha!
+--------------------------------------------
+Enter your price range (min-max): 1000 - 5000
+
+Available Products:
+1. Mixer Grinder - ₹4000
+2. Electric Kettle - ₹1500
+3. Induction Cooktop - ₹4500
+
+Enter the number of the product you want to view: 2
+
+--------------------------------------------
+           Product Details
+--------------------------------------------
+Product Name: Electric Kettle
+Price: ₹1500
+Available Shops:
+1. Raj Electronics - Location: Tirupati, Contact: +91 9876543210
+2. Best Buy Appliances - Location: Chennai, Contact: +91 9823456789
+
+Enter the shop number to get more details: 1
+
+--------------------------------------------
+           Shop Details
+--------------------------------------------
+Shop Name: Raj Electronics
+Location: Tirupati
+Contact: +91 9876543210
+--------------------------------------------
+Do you want to filter again? (yes/no): no
+
+Thank you for using Home Appliance Filtering System!
+                </pre>
+            </div>
+
+            <li onclick="toggleDetails('project2')">🏦 Online Banking Management System</li>
+            <div id="project2" class="project-details" style="display:none;">
+                <p>A console-based banking system allowing users to manage accounts, transactions, and security.</p>
+                <h3>How the System Works</h3>
+                <ul>
+                    <li>Users can create accounts, log in, and perform transactions.</li>
+                    <li>Admin manages user accounts and monitors transactions.</li>
+                </ul>
+                <h3>Example Output</h3>
+                <pre>
+--------------------------------------------
+      Online Banking Management System
+--------------------------------------------
+1. Login
+2. Create Account
+3. Exit
+
+Enter your choice: 2
+
+--------------------------------------------
+        Create New Account
+--------------------------------------------
+Enter Name: Nirosha
+Enter Username: nirosha123
+Enter Password: ********
+Enter Initial Deposit: ₹5000
+
+Account Created Successfully! ✅
+
+--------------------------------------------
+        User Login
+--------------------------------------------
+Enter Username: nirosha123
+Enter Password: ********
+
+Login Successful! ✅
+
+--------------------------------------------
+        Banking Dashboard
+--------------------------------------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. Transfer Money
+5. Logout
+
+Enter your choice: 1
+
+Your Current Balance: ₹5000
+
+Do you want to perform another transaction? (yes/no): no
+
+Thank you for using Online Banking Management System!
+                </pre>
+            </div>
+        </ul>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="resume-section">
+        <h2>My Resume</h2>
+        <p>Click the buttons below to view or download my resume.</p>
+        <a href="assets/resume.pdf" download="My_Resume.pdf" class="resume-btn">Download Resume</a>
+        <a href="assets/resume.pdf" target="_blank" class="resume-btn">View Resume</a>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
